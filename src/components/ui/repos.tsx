@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, SetStateAction } from "react";
 import axios, { AxiosError } from "axios";
-import Repo, { repoProps } from "./repo";
+import Repo, { repoProps, topicList } from "./repo";
 import CardSkeleton from "./card-skeleton";
 import { Search } from "lucide-react";
 import { Input } from "./input";
+import { Badge } from "./badge";
 
 function Repos() {
 
@@ -47,6 +48,14 @@ function Repos() {
         setValue(e.target.value)
     }
 
+    const handleClick = (e) => {
+
+        value == e.target.innerText ? 
+            setValue("") 
+        : 
+            setValue(e.target.innerText)
+    }
+
     // Filter gitRepos based on input value
     const filteredRepos = gitRepos.filter((gitRepo) => {
         const repoName = gitRepo.name.toLowerCase()
@@ -81,7 +90,7 @@ function Repos() {
     ));
 
     return (
-        <div>
+        <div id="allrepo">
             <div className="flex justify-between">
                 <div className='text-3xl'>Repos</div>
                 <div className="relative">
@@ -94,10 +103,16 @@ function Repos() {
                     />
                 </div>
             </div>
-            <div id="allrepo" className="mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 justify-items-center justify-center gap-4 py-3 mb-5">
+            <div className="container hidden py-3 md:flex gap-4 flex-wrap">
+                {
+                    topicList.map((topic,  i) => (
+                        <Badge key={i} className={`capitalize text-nowrap ${(value == topic)? "opacity-65" : "opacity-100"}`} onClick={handleClick}>{topic}</Badge>
+                    ))
+                }
+            </div>
+            <div className="mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  justify-items-center justify-center gap-4 py-3 mb-5">
                 {loading && (
                     <>
-                        <CardSkeleton />
                         <CardSkeleton />
                         <CardSkeleton />
                         <CardSkeleton />
@@ -106,23 +121,7 @@ function Repos() {
                     </>
                 )}
                 {!loading && !error && (
-                        <>
-                        {/* {gitRepos.map((gitRepo: repoProps) => (
-                            <Repo 
-                                key={gitRepo.id}
-                                id={gitRepo.id}
-                                name={gitRepo.name}
-                                html_url={gitRepo.html_url}
-                                homepage={gitRepo.homepage}
-                                forks_count={gitRepo.forks_count}
-                                stargazers_count={gitRepo.stargazers_count}
-                                topics={gitRepo.topics}
-                                description={gitRepo.description}
-                                created_at={gitRepo.created_at}
-                                updated_at={gitRepo.updated_at} 
-                                language={gitRepo.language}                        
-                            />
-                        ))} */}
+                    <>
                         {renderedRepos}
                     </>
                 )}

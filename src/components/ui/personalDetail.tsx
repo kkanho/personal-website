@@ -132,7 +132,7 @@ function PersonalDetail() {
                             </div> */}
                         </CardContent>
                     </Card>
-                    <Card className="hidden h-80 md:flex flex-col text-center justify-center align-middle items-center animate-fadeindown">
+                    <Card className="hidden h-80 md:flex flex-col text-center justify-center align-middle items-center animate-fadeindown overflow-hidden">
                         <CardContent>
                             <div className="text-5xl lg:text-6xl text-wrap themeGradientText font-extrabold">
                                 Frontend Developer

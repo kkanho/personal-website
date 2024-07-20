@@ -5,6 +5,30 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./car
 import { Link } from "react-router-dom";
 import { processDate } from "@/processDate";
 
+import ReactIcon from '../icons/ReactIcon'
+import NextIcon from '../icons/NextIcon'
+
+import JavaScriptIcon from '../icons/JavaScriptIcon'
+import TypeScriptIcon from '../icons/TypeScriptIcon'
+import HTMLIcon from '../icons/HTMLIcon'
+import CSSIcon from '../icons/CSSIcon'
+import JavaIcon from '../icons/JavaIcon'
+import CppIcon from "../icons/CppIcon";
+import PHPIcon from '../icons/PHPIcon'
+import PythonIcon from '../icons/PythonIcon'
+
+import DockerIcon from '../icons/DockerIcon'
+import NginxIcon from '../icons/NginxIcon'
+import NodejsIcon from '../icons/NodejsIcon'
+import FirebaseIcon from '../icons/FirebaseIcon'
+
+import BootstrapIcon from '../icons/BootstrapIcon'
+import TailwindIcon from '../icons/TailwindIcon'
+import MUIIcon from "../icons/MUIIcon";
+
+import GameIcon from "../icons/GameIcon";
+
+
 
 export type repoProps = {
     id: number;
@@ -19,6 +43,14 @@ export type repoProps = {
     created_at: string;
     updated_at: string;
 };
+
+export const topicList = [
+    "next", "react",
+    "javascript", "typescript", "python", "php", "java", "cpp",
+    "bootstrap", "tailwind", "material-ui",
+    "docker", "firebase", "nginx", "nodejs", 
+    "mini-game"
+]
 
 
 const Repo = ({ id, name, html_url, homepage, forks_count, stargazers_count, topics, description, language, created_at, updated_at}: repoProps) => {
@@ -40,9 +72,41 @@ const Repo = ({ id, name, html_url, homepage, forks_count, stargazers_count, top
                 </CardDescription>
                 <CardDescription className="flex flex-wrap gap-2">
                     {topics?.map((topic, i) => (
-                        <Badge className="min-w-fit" key={i}>
-                            {topic}
-                        </Badge>
+                        <div key={i}>
+                            {
+                                // topicList.includes(topic) ? "" : 
+                                <Badge className="capitalize drop-shadow-lg">{topic}</Badge>
+                            }
+                        </div>
+                    ))}
+                </CardDescription>
+                <CardDescription className="flex flex-wrap pt-4">
+                    {topics?.map((topic, i) => (
+                        <div key={i}>
+                        {
+                            (topic == "next")? <div className="w-10 h-10 mr-4"><NextIcon /></div> :
+                            (topic == "react")? <div className="w-10 h-10 mr-4"><ReactIcon /></div> :
+
+                            (topic == "javascript")? <div className="w-10 h-10 mr-4"><JavaScriptIcon /></div> :
+                            (topic == "typescript")? <div className="w-10 h-10 mr-4"><TypeScriptIcon /></div> :
+                            (topic == "python")? <div className="w-10 h-10 mr-4"><PythonIcon /></div> :
+                            (topic == "java")? <div className="w-10 h-10 mr-4"><JavaIcon /></div> :
+                            (topic == "cpp")? <div className="w-10 h-10 mr-4"><CppIcon /></div> :
+                            (topic == "php")? <div className="w-10 h-10 mr-4"><PHPIcon /></div> :
+                            
+                            (topic == "bootstrap")? <div className="w-10 h-10 mr-4"><BootstrapIcon /></div> :
+                            (topic == "material-ui")? <div className="w-10 h-10 mr-4"><MUIIcon /></div> :
+                            (topic == "tailwind")? <div className="w-10 h-10 mr-4"><TailwindIcon /></div> :
+
+                            (topic == "docker")? <div className="w-10 h-10 mr-4"><DockerIcon /></div> : 
+                            (topic == "firebase")? <div className="w-10 h-10 mr-4"><FirebaseIcon /></div> :
+                            (topic == "nginx")? <div className="w-10 h-10 mr-4"><NginxIcon /></div> :
+                            (topic == "nodejs")? <div className="w-10 h-10 mr-4"><NodejsIcon /></div> :
+                            
+                            (topic == "mini-game")? <div className="w-10 h-10 mr-4"><GameIcon /></div> :
+                            <div className="w-0"></div>
+                        }
+                        </div>
                     ))}
                 </CardDescription>
             </CardHeader>
