@@ -30,8 +30,8 @@ export default function Navbar() {
     }, []);
 
     return (
-        // <nav className={`z-[9999] w-full mb-4 sticky top-0 ${scrollPosition>20? "bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-0": "bg-transparent" }`}>
-        <nav className={`w-full mb-4 top-0`}>
+        <nav className={`z-[9999] w-full mb-4 sticky top-0 ${scrollPosition>20? "bg-clip-padding backdrop-filter backdrop-blur-3xl bg-opacity-0": "bg-transparent" }`}>
+        {/* <nav className={`w-full mb-4 top-0`}> */}
             <div className="items-center px-4 max-w-screen-xl mx-auto md:flex md:px-8">
                 <div className="flex items-center justify-between py-3 md:py-5 md:block">
                     <Link to="/">
