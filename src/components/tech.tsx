@@ -115,7 +115,7 @@ const Tech = () => {
                 </Button>
             </div>
             {
-                gridView?
+                !gridView?
                     <div className='max-w-screen-md m-auto py-3 grid grid-cols-3  sm:grid-cols-4 sm:gap-4 '>
                         {
                             Techs.map((tech, i) => (
