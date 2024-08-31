@@ -1,10 +1,10 @@
-import { useState, useEffect, SetStateAction } from "react";
+import React, { useState, useEffect } from "react";
 import axios, { AxiosError } from "axios";
 import Repo, { repoProps, topicList } from "./repo";
-import CardSkeleton from "./card-skeleton";
+import CardSkeleton from "./ui/card-skeleton";
 import { Search } from "lucide-react";
-import { Input } from "./input";
-import { Badge } from "./badge";
+import { Input } from "./ui/input";
+import { Badge } from "./ui/badge";
 
 function Repos() {
 
@@ -48,12 +48,14 @@ function Repos() {
         setValue(e.target.value)
     }
 
-    const handleClick = (e) => {
+    const handleClick = (e: React.MouseEvent<HTMLElement>) => {
 
-        value == e.target.innerText ? 
+        const target = e.target as HTMLElement
+
+        value == target.innerText ? 
             setValue("") 
         : 
-            setValue(e.target.innerText)
+            setValue(target.innerText)
     }
 
     // Filter gitRepos based on input value

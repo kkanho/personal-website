@@ -1,8 +1,8 @@
 
-import CalendarIcon from "../icons/CalendarIcon"
-import InfoIcon from "../icons/InfoIcon"
-import RepoIcon from "../icons/RepoIcon"
-import TechIcon from "../icons/TechIcon"
+import CalendarIcon from "./icons/CalendarIcon"
+import InfoIcon from "./icons/InfoIcon"
+import RepoIcon from "./icons/RepoIcon"
+import TechIcon from "./icons/TechIcon"
 import { menus } from "./navbar"
 
 

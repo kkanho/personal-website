@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
-import { ModeToggle } from "../mode-toggle";
+import { ModeToggle } from "./mode-toggle";
+
 
 export const menus = [
     { title: "About", path: "/#aboutme" },

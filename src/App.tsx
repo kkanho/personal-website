@@ -1,11 +1,11 @@
-import Navbar from "@/components/ui/navbar";
-import Repos from "./components/ui/repos";
-import PersonalDetail from "./components/ui/personalDetail";
-import Tech from "./components/ui/tech";
-import Footer from "./components/ui/footer";
+import Navbar from "./components/navbar";
+import Repos from "./components/repos";
+import PersonalDetail from "./components/personalDetail";
+import Tech from "./components/tech";
+import Footer from "./components/footer";
 import { Separator } from "./components/ui/separator";
-import Timeline from "./components/ui/timeline";
-import Sidebar from "./components/ui/sidebar";
+import Timeline from "./components/timeline";
+import Sidebar from "./components/sidebar";
 
 function App() {
     return (

@@ -1,32 +1,30 @@
 import { Chrome, Github, Star } from "lucide-react";
-import { Badge } from "./badge";
-import { Button } from "./button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./card";
+import { Badge } from "./ui/badge";
+import { Button } from "./ui/button";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "./ui/card";
 import { Link } from "react-router-dom";
 import { processDate } from "@/processDate";
 
-import ReactIcon from '../icons/ReactIcon'
-import NextIcon from '../icons/NextIcon'
+import ReactIcon from './icons/ReactIcon'
+import NextIcon from './icons/NextIcon'
 
-import JavaScriptIcon from '../icons/JavaScriptIcon'
-import TypeScriptIcon from '../icons/TypeScriptIcon'
-import HTMLIcon from '../icons/HTMLIcon'
-import CSSIcon from '../icons/CSSIcon'
-import JavaIcon from '../icons/JavaIcon'
-import CppIcon from "../icons/CppIcon";
-import PHPIcon from '../icons/PHPIcon'
-import PythonIcon from '../icons/PythonIcon'
+import JavaScriptIcon from './icons/JavaScriptIcon'
+import TypeScriptIcon from './icons/TypeScriptIcon'
+import JavaIcon from './icons/JavaIcon'
+import CppIcon from "./icons/CppIcon";
+import PHPIcon from './icons/PHPIcon'
+import PythonIcon from './icons/PythonIcon'
 
-import DockerIcon from '../icons/DockerIcon'
-import NginxIcon from '../icons/NginxIcon'
-import NodejsIcon from '../icons/NodejsIcon'
-import FirebaseIcon from '../icons/FirebaseIcon'
+import DockerIcon from './icons/DockerIcon'
+import NginxIcon from './icons/NginxIcon'
+import NodejsIcon from './icons/NodejsIcon'
+import FirebaseIcon from './icons/FirebaseIcon'
 
-import BootstrapIcon from '../icons/BootstrapIcon'
-import TailwindIcon from '../icons/TailwindIcon'
-import MUIIcon from "../icons/MUIIcon";
+import BootstrapIcon from './icons/BootstrapIcon'
+import TailwindIcon from './icons/TailwindIcon'
+import MUIIcon from "./icons/MUIIcon";
 
-import GameIcon from "../icons/GameIcon";
+import GameIcon from "./icons/GameIcon";
 
 
 
@@ -53,7 +51,7 @@ export const topicList = [
 ]
 
 
-const Repo = ({ id, name, html_url, homepage, forks_count, stargazers_count, topics, description, language, created_at, updated_at}: repoProps) => {
+const Repo = ({ id, name, html_url, homepage, forks_count, stargazers_count, topics, description, language, updated_at}: repoProps) => {
 
     return (
         <Card key={id} className="w-full shadow-md rounded-xl flex flex-col transition-all duration-300 hover:scale-110 hover:rotate-1 overflow-hidden">

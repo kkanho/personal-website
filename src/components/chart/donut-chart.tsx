@@ -15,7 +15,7 @@ import {
     ChartTooltipContent,
 } from "@/components/ui/chart";
 import axios, { AxiosError } from "axios";
-import { repoProps } from "../ui/repo";
+import { repoProps } from "../repo";
 
 
 const chartConfig = {

@@ -1,10 +1,10 @@
 import axios, { AxiosError } from "axios";
 import { useEffect, useState } from "react";
-import { Card, CardContent, CardDescription, CardHeader } from "./card";
+import { Card, CardContent } from "../components/ui/card";
 import { processDate } from "@/processDate";
-import { Button } from "./button";
-import { DonutChart } from "../chart/donut-chart";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "./tooltip";
+import { Button } from "../components/ui/button";
+import { DonutChart } from "../components/chart/donut-chart";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../components/ui/tooltip";
 
 type personalDetailProps = {
     avatar_url: string,
