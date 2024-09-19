@@ -54,7 +54,7 @@ export const topicList = [
 const Repo = ({ id, name, html_url, homepage, forks_count, stargazers_count, topics, description, language, updated_at}: repoProps) => {
 
     return (
-        <Card key={id} className="w-full shadow-md rounded-xl flex flex-col transition-all duration-300 hover:scale-110 hover:rotate-1 overflow-hidden">
+        <Card key={id} className="w-full max-w-lg shadow-md rounded-xl flex flex-col transition-all duration-300 hover:scale-110 hover:rotate-1 overflow-hidden">
             <CardHeader className="flex-grow">
                 <CardTitle>
                     <a

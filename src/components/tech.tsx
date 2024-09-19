@@ -110,13 +110,13 @@ const Tech = () => {
         <div id="techStack">
             <div className='flex justify-between'>
                 <div className='text-3xl'>Tech</div> 
-                <Button type='button' size="icon" variant="outline" onClick={handleView}>
+                <Button type='button' size="icon" variant="outline" onClick={handleView} className='invisible md:visible'>
                     <LayoutGrid />
                 </Button>
             </div>
             {
                 !gridView?
-                    <div className='max-w-screen-md m-auto py-3 grid grid-cols-3  sm:grid-cols-4 sm:gap-4 '>
+                    <div className='max-w-screen-md m-auto py-3 grid grid-cols-3 sm:grid-cols-4 sm:gap-4 '>
                         {
                             Techs.map((tech, i) => (
                                 <Card key={i} className='h-40 w-40 flex flex-col justify-center items-center'>

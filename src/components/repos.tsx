@@ -112,7 +112,7 @@ function Repos() {
                     ))
                 }
             </div>
-            <div className="mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3  justify-items-center justify-center gap-4 py-3 mb-5">
+            <div className="mx-auto grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 justify-items-center justify-center gap-4 py-3 mb-5 md:px-8">
                 {loading && (
                     <>
                         <CardSkeleton />
