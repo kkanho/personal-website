@@ -9,7 +9,7 @@ export const menus = [
     { title: "Tech", path: "/#techStack" },
     { title: "Repos", path: "/#allrepo" },
     { title: "TimeLine", path: "/#timeline" },
-    { title: "Contact", path: "/#ContactMe" },
+    // { title: "Contact", path: "/#ContactMe" },
 ];
 
 export default function Navbar() {

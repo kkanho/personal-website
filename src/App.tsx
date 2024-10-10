@@ -24,8 +24,8 @@ function App() {
               <Separator />
               <Timeline />
               <Separator />
-              <ContactMe />
-              <Separator />
+              {/* <ContactMe />
+              <Separator /> */}
           </div>
           <Footer /> 
         </div>

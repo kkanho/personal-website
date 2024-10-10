@@ -9,9 +9,9 @@ export default defineConfig({
             "@": path.resolve(__dirname, "./src"),
         },
     },
-    define: {
-        'process.env.VITE_EMAIL_SERVICE_ID': JSON.stringify(process.env.VITE_EMAIL_SERVICE_ID),
-        'process.env.VITE_EMAIL_TEMPLATE_ID': JSON.stringify(process.env.VITE_EMAIL_TEMPLATE_ID),
-        'process.env.VITE_EMAIL_USER_ID': JSON.stringify(process.env.VITE_EMAIL_USER_ID),
-    },
+    // define: {
+    //     'process.env.VITE_EMAIL_SERVICE_ID': JSON.stringify(process.env.VITE_EMAIL_SERVICE_ID),
+    //     'process.env.VITE_EMAIL_TEMPLATE_ID': JSON.stringify(process.env.VITE_EMAIL_TEMPLATE_ID),
+    //     'process.env.VITE_EMAIL_USER_ID': JSON.stringify(process.env.VITE_EMAIL_USER_ID),
+    // },
 });
