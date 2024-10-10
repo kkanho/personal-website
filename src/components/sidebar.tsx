@@ -1,9 +1,10 @@
 
+import { Contact2Icon } from "lucide-react"
 import CalendarIcon from "./icons/CalendarIcon"
 import InfoIcon from "./icons/InfoIcon"
 import RepoIcon from "./icons/RepoIcon"
 import TechIcon from "./icons/TechIcon"
-import { menus } from "./navbar"
+import { menus } from "./parts/navbar"
 
 
 const Sidebar = () => {
@@ -19,6 +20,7 @@ const Sidebar = () => {
                                 item.title=='Tech' ?  <TechIcon /> : 
                                 item.title=='Repos' ?  <RepoIcon />:
                                 item.title=='TimeLine' ?  <CalendarIcon />:
+                                item.title=='Contact' ?  <Contact2Icon />:
                                 ""
                             }
                             

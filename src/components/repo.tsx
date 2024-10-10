@@ -120,7 +120,7 @@ const Repo = ({ id, name, html_url, homepage, forks_count, stargazers_count, top
                                     </Button>
                                 </Link>
                                 <Link to={homepage} className="flex-1 min-w-fit">
-                                    <Button className="w-full hover:text-indigo-600">
+                                    <Button className="w-full hover:bg-indigo-500 hover:text-inherit duration-200">
                                         Live <Chrome size={"16px"}/>
                                     </Button>
                                 </Link>

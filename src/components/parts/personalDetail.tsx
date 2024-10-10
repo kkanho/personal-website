@@ -1,10 +1,10 @@
 import axios, { AxiosError } from "axios";
 import { useEffect, useState } from "react";
-import { Card, CardContent } from "../components/ui/card";
+import { Card, CardContent } from "@/components/ui/card";
 import { processDate } from "@/processDate";
-import { Button } from "../components/ui/button";
-import { DonutChart } from "../components/chart/donut-chart";
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "../components/ui/tooltip";
+import { Button } from "@/components/ui/button";
+import { DonutChart } from "@/components/chart/donut-chart";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
 type personalDetailProps = {
     avatar_url: string,
@@ -67,11 +67,6 @@ function PersonalDetail() {
         <div id="aboutme" className="mx-auto flex flex-col gap-4
             md:grid md:grid-flow-col md:grid-rows-2 md:grid-cols-2 md:mt-14
             lg:grid-cols-3">
-            {loading && (
-                <>
-                    
-                </>
-            )}
             {!loading && !error && (
                 <>
                     <Card className="row-start-1 col-start-1 md:row-span-2 flex flex-col flex-auto gap-2 justify-center animate-fadeinup">
@@ -102,7 +97,8 @@ function PersonalDetail() {
                             </div>
                             {/* <a href={`mailto:${personalDetail!.email}`}> */}
                             <div>
-                                <a href={personalDetail!.html_url}>
+                                {/* <a href={personalDetail!.html_url}> */}
+                                <a href="/#ContactMe">
                                     <Button className="border-primary bg-inherit hover:border-indigo-600 hover:text-indigo-600" variant={"outline"}>
                                         Contact Now
                                     </Button>

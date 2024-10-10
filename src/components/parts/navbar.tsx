@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu } from "lucide-react";
 import { Link } from "react-router-dom";
-import { ModeToggle } from "./mode-toggle";
+import { ModeToggle } from "../mode-toggle";
 
 
 export const menus = [
@@ -9,7 +9,7 @@ export const menus = [
     { title: "Tech", path: "/#techStack" },
     { title: "Repos", path: "/#allrepo" },
     { title: "TimeLine", path: "/#timeline" },
-    // { title: "Contact", path: "/" },
+    { title: "Contact", path: "/#ContactMe" },
 ];
 
 export default function Navbar() {

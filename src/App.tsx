@@ -1,10 +1,12 @@
-import Navbar from "./components/navbar";
-import Repos from "./components/repos";
-import PersonalDetail from "./components/personalDetail";
-import Tech from "./components/tech";
-import Footer from "./components/footer";
+import Navbar from "./components/parts/navbar";
+import Repos from "./components/parts/repos";
+import PersonalDetail from "./components/parts/personalDetail";
+import Tech from "./components/parts/tech";
+import Footer from "./components/parts/footer";
+import Timeline from "./components/parts/timeline";
+import ContactMe from "./components/parts/Contact";
+
 import { Separator } from "./components/ui/separator";
-import Timeline from "./components/timeline";
 import Sidebar from "./components/sidebar";
 
 function App() {
@@ -21,6 +23,8 @@ function App() {
               <Repos />
               <Separator />
               <Timeline />
+              <Separator />
+              <ContactMe />
               <Separator />
           </div>
           <Footer /> 

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios, { AxiosError } from "axios";
-import Repo, { repoProps, topicList } from "./repo";
-import CardSkeleton from "./ui/card-skeleton";
+import Repo, { repoProps, topicList } from "../repo";
+import CardSkeleton from "../ui/card-skeleton";
 import { Search } from "lucide-react";
-import { Input } from "./ui/input";
-import { Badge } from "./ui/badge";
+import { Input } from "../ui/input";
+import { Badge } from "../ui/badge";
 
 function Repos() {
 

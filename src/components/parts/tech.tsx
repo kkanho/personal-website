@@ -1,28 +1,28 @@
 import Marquee from 'react-fast-marquee'
-import { Card, CardContent, CardDescription } from './ui/card'
+import { Card, CardContent, CardDescription } from '../ui/card'
 
 
-import ReactIcon from './icons/ReactIcon'
-import NextIcon from './icons/NextIcon'
+import ReactIcon from '../icons/ReactIcon'
+import NextIcon from '../icons/NextIcon'
 
-import JavaIcon from './icons/JavaIcon'
-import CppIcon from './icons/CppIcon'
-import PHPIcon from './icons/PHPIcon'
-import PythonIcon from './icons/PythonIcon'
-import HTMLIcon from './icons/HTMLIcon'
-import CSSIcon from './icons/CSSIcon'
-import JavaScriptIcon from './icons/JavaScriptIcon'
-import TypeScriptIcon from './icons/TypeScriptIcon'
+import JavaIcon from '../icons/JavaIcon'
+import CppIcon from '../icons/CppIcon'
+import PHPIcon from '../icons/PHPIcon'
+import PythonIcon from '../icons/PythonIcon'
+import HTMLIcon from '../icons/HTMLIcon'
+import CSSIcon from '../icons/CSSIcon'
+import JavaScriptIcon from '../icons/JavaScriptIcon'
+import TypeScriptIcon from '../icons/TypeScriptIcon'
 
-import DockerIcon from './icons/DockerIcon'
-import NodejsIcon from './icons/NodejsIcon'
-import NginxIcon from './icons/NginxIcon'
-import FirebaseIcon from './icons/FirebaseIcon'
+import DockerIcon from '../icons/DockerIcon'
+import NodejsIcon from '../icons/NodejsIcon'
+import NginxIcon from '../icons/NginxIcon'
+import FirebaseIcon from '../icons/FirebaseIcon'
 
-import BootstrapIcon from './icons/BootstrapIcon'
-import TailwindIcon from './icons/TailwindIcon'
-import MUIIcon from "./icons/MUIIcon";
-import { Button } from './ui/button'
+import BootstrapIcon from '../icons/BootstrapIcon'
+import TailwindIcon from '../icons/TailwindIcon'
+import MUIIcon from "../icons/MUIIcon";
+import { Button } from '../ui/button'
 import { LayoutGrid } from 'lucide-react'
 import { useState } from 'react'
 
