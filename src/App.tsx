@@ -4,7 +4,7 @@ import PersonalDetail from "./components/parts/personalDetail";
 import Tech from "./components/parts/tech";
 import Footer from "./components/parts/footer";
 import Timeline from "./components/parts/timeline";
-import ContactMe from "./components/parts/Contact";
+import ContactMe from "./components/parts/contact";
 
 import { Separator } from "./components/ui/separator";
 import Sidebar from "./components/sidebar";
