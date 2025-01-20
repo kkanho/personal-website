@@ -99,7 +99,7 @@ function PersonalDetail() {
                             <div>
                                 {/* <a href={personalDetail!.html_url}> */}
                                 {/* <a href="/#ContactMe"> */}
-                                <a href="mailto:kanho2003@gmail.com">
+                                <a href="mailto:kanho.devtech@gmail.com">
                                     <Button className="border-primary bg-inherit hover:border-indigo-600 hover:text-indigo-600" variant={"outline"}>
                                         Contact Now
                                     </Button>
