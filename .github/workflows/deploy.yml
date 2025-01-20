@@ -34,7 +34,8 @@ jobs:
         git config --global user.name 'github-actions[bot]'
         git config --global user.email 'github-actions[bot]@users.noreply.github.com'
         git clone --branch=main https://x-access-token:${{ secrets.PAT }}@github.com/kkanho/kkanho.github.io.git deploy
-        rsync -av --delete dist/ deploy/  # Sync the entire dist folder to deploy
+        rsync -av --delete dist/index.html deploy/index.html  # Replace the index.html file
+        rsync -av --delete dist/assets/ deploy/assets/  # Replace the assets folder
         cd deploy
         git add .
         git commit -m 'Deploy to GitHub Pages'
