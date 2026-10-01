@@ -109,14 +109,15 @@ const Tech = () => {
     return (
         <div id="techStack">
             <div className='flex justify-between'>
-                <div className='text-3xl'>Tech</div> 
-                <Button type='button' size="icon" variant="outline" onClick={handleView} className='invisible md:visible'>
+                <div className='text-3xl text-primary'>Tech</div> 
+                <Button type='button' size="icon" variant="outline" onClick={handleView} className='invisible md:visible bg-background_light text-primary hover:text-primary hover:opacity-80 hover:shadow-inner border'>
                     <LayoutGrid />
                 </Button>
             </div>
+            <div className="overflow-hidden z-50 md:px-8">
             {
                 !gridView?
-                    <div className='max-w-screen-md m-auto py-3 grid grid-cols-3 sm:grid-cols-4 sm:gap-4 '>
+                    <div className='max-w-screen-md m-auto grid grid-cols-3 py-3 sm:grid-cols-4 gap-2 sm:gap-4'>
                         {
                             Techs.map((tech, i) => (
                                 <Card key={i} className='h-40 w-40 flex flex-col justify-center items-center'>
@@ -131,21 +132,22 @@ const Tech = () => {
                         }
                     </div>
                 :
-                    <Marquee autoFill pauseOnClick speed={100} className="py-3 overflow-hidden z-50">
-                        {
-                            Techs.map((tech, i) => (
-                                <Card key={i} className='h-40 w-40 mx-4 flex flex-col justify-center items-center'>
-                                    <CardContent className='h-1/2 w-1/2 p-0'>
-                                        {tech.icon}
-                                    </CardContent>
-                                    <CardDescription className='text-xl'>
-                                        {tech.title}
-                                    </CardDescription>
-                                </Card>
-                            ))
-                        }
-                    </Marquee>
+                        <Marquee autoFill pauseOnClick speed={100} className='py-3' >
+                            {
+                                Techs.map((tech, i) => (
+                                    <Card key={i} className='h-40 w-40 mx-4 flex flex-col justify-center items-center'>
+                                        <CardContent className='h-1/2 w-1/2 p-0'>
+                                            {tech.icon}
+                                        </CardContent>
+                                        <CardDescription className='text-xl'>
+                                            {tech.title}
+                                        </CardDescription>
+                                    </Card>
+                                ))
+                            }
+                        </Marquee>
             }
+            </div>
             
         </div>
         )

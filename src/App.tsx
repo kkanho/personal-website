@@ -12,7 +12,7 @@ import Sidebar from "./components/sidebar";
 function App() {
     return (
       <>
-        <div className="spotlight min-h-min w-full">
+        <div className="min-h-min w-full">
           <Navbar />
           <Sidebar />
           <div className="container flex flex-col gap-12 justify-between px-2 sm:px-4 md:px-8 lg:px-24">

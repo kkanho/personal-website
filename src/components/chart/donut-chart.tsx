@@ -48,7 +48,12 @@ const chartConfig = {
     },
 } satisfies ChartConfig;
 
-
+function passValidCount(count: number | undefined): number {
+    if (count === undefined) {
+        return 0;
+    }
+    return count;
+}
 
 export function DonutChart() {
 
@@ -93,7 +98,7 @@ export function DonutChart() {
     }
     
     // console.log(langCounts)
-    const other = numOfRepo-langCounts.get("JavaScript")-langCounts.get("TypeScript")-langCounts.get("PHP")-langCounts.get("HTML")-langCounts.get("Java")
+    const other = numOfRepo-passValidCount(langCounts.get("JavaScript"))-passValidCount(langCounts.get("TypeScript"))-passValidCount(langCounts.get("PHP"))-passValidCount(langCounts.get("HTML"))-passValidCount(langCounts.get("Java"))
 
     const chartData = [
         { language: "javascript", repos: langCounts.get("JavaScript"), fill: "var(--color-javascript)" },
@@ -141,19 +146,18 @@ export function DonutChart() {
                                                 y={viewBox.cy}
                                                 textAnchor="middle"
                                                 dominantBaseline="middle"
+                                                fill="hsl(var(--text-primary))"
                                             >
                                                 <tspan
                                                     x={viewBox.cx}
                                                     y={viewBox.cy}
-                                                    className="fill-foreground text-3xl font-bold"
+                                                    className="text-3xl font-bold"
                                                 >
-                                                    {/* {totalRepos.toLocaleString()} */}
                                                     {numOfRepo}
                                                 </tspan>
                                                 <tspan
                                                     x={viewBox.cx}
                                                     y={(viewBox.cy || 0) + 24}
-                                                    className="fill-muted-foreground"
                                                 >
                                                     repos
                                                 </tspan>

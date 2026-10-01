@@ -19,6 +19,10 @@ module.exports = {
       },
     },
     extend: {
+      textColor: {
+        primary: "hsl(var(--text-primary))",
+        primary_muted: "hsl(var(--text-primary-muted))",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -49,15 +53,20 @@ module.exports = {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
         },
-        card: {
-          DEFAULT: "hsl(var(--card))",
-          foreground: "hsl(var(--card-foreground))",
-        },
+        // card: {
+        //   DEFAULT: "hsl(var(--card))",
+        //   foreground: "hsl(var(--card-foreground))",
+        // },
+        background_light: "hsl(var(--background-light))",
+        background_dark: "hsl(var(--background-dark))",
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        'card': 'var(--shadow-card)',
       },
       keyframes: {
         "accordion-down": {

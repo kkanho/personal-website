@@ -66,28 +66,30 @@ function PersonalDetail() {
     return (
         <div id="aboutme" className="mx-auto flex flex-col gap-4
             md:grid md:grid-flow-col md:grid-rows-2 md:grid-cols-2 md:mt-14
-            lg:grid-cols-3">
+            lg:grid-cols-3 md:px-8">
             {!loading && !error && (
                 <>
-                    <Card className="row-start-1 col-start-1 md:row-span-2 flex flex-col flex-auto gap-2 justify-center animate-fadeinup">
+                    <Card className="row-start-1 col-start-1 md:row-span-2 flex flex-col flex-auto gap-2 py-3 justify-center animate-fadeinup">
                         <CardContent className="text-center text-lg flex flex-col gap-4">
-                            <TooltipProvider><Tooltip>
-                            <TooltipTrigger className="rounded border-4 border-indigo-600 overflow-hidden m-4 shadow-lg transition-all hover:scale-105 self-center flex justify-center aspect-square md:w-10/12 themeGradientBg animate-fadeinup delay-200">
-                                {personalDetail!.avatar_url? (
-                                    <div >
-                                        <a href={personalDetail!.html_url} className="w-full h-full">
-                                            <img src={personalDetail!.avatar_url} alt={personalDetail!.name} className="animate-in fade-in-5 ease-in transition-all duration-1000 w-full h-full" loading="lazy"/>
-                                        </a>
-                                    </div>
-                                    ): ("")
-                                }
-                            </TooltipTrigger>
-                            <TooltipContent>
-                                <div className="container text-2xl themeGradientText">
-                                    {personalDetail!.name}
-                                </div> 
-                            </TooltipContent>
-                            </Tooltip></TooltipProvider>
+                            <TooltipProvider>
+                                <Tooltip>
+                                    <TooltipTrigger className="rounded border-indigo-600 border-2 overflow-hidden m-4 shadow-lg transition-all hover:scale-105 self-center flex justify-center aspect-square md:w-10/12 themeGradientBg animate-fadeinup delay-200">
+                                        {personalDetail!.avatar_url? (
+                                            <div >
+                                                <a href={personalDetail!.html_url} className="w-full h-full">
+                                                    <img src={personalDetail!.avatar_url} alt={personalDetail!.name} className="animate-in fade-in-5 ease-in transition-all duration-1000 w-full h-full" loading="lazy"/>
+                                                </a>
+                                            </div>
+                                            ): ("")
+                                        }
+                                    </TooltipTrigger>
+                                    <TooltipContent className="container text-2xl border-primary text-primary">
+                                        <div >
+                                            {personalDetail!.name}
+                                        </div> 
+                                    </TooltipContent>
+                                </Tooltip>
+                            </TooltipProvider>
                             
                             <div className="container text-xl px-0 text-justify pb-4 border-b-2">
                                 {personalDetail!.bio}
@@ -100,7 +102,7 @@ function PersonalDetail() {
                                 {/* <a href={personalDetail!.html_url}> */}
                                 {/* <a href="/#ContactMe"> */}
                                 <a href="mailto:kanho.devtech@gmail.com">
-                                    <Button className="border-primary bg-inherit hover:border-indigo-600 hover:text-indigo-600" variant={"outline"}>
+                                    <Button className="bg-inherit hover:text-indigo-600 hover:scale-105" variant={"outline"}>
                                         Contact Now
                                     </Button>
                                 </a>
@@ -121,18 +123,12 @@ function PersonalDetail() {
                     <Card className="hidden h-80 lg:flex flex-col text-center justify-center align-middle items-center animate-fadeinup">
                         <CardContent>
                             <DonutChart />
-                            {/* <div className="text-9xl">
-                                {personalDetail!.public_repos}
-                            </div>
-                            <div className="text-base text-muted-foreground">
-                                Repos
-                            </div> */}
                         </CardContent>
                     </Card>
                     <Card className="hidden h-80 md:flex flex-col text-center justify-center align-middle items-center animate-fadeindown overflow-hidden">
                         <CardContent>
-                            <div className="text-5xl lg:text-6xl text-wrap themeGradientText font-extrabold">
-                                Frontend Developer
+                            <div className="text-5xl xl:text-6xl text-wrap themeGradientText font-extrabold">
+                                Full-Stack Developer
                             </div>
                         </CardContent>
                     </Card>

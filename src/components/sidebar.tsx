@@ -14,7 +14,7 @@ const Sidebar = () => {
             md:flex flex-col gap-4 z-[9999] p-2 fixed top-[40%] md:right-8 justify-center items-center">
                 {menus.map((item, idx) => (
                     <a href={item.path} className="" key={idx}>
-                        <div className="w-10 h-10 p-2 rounded-full bg-primary-foreground opacity-90 shadow-2xl hover:opacity-80 hover:shadow-inner border">
+                        <div className="w-10 h-10 p-2 rounded-full bg-background_light opacity-90 shadow-2xl hover:opacity-80 hover:shadow-inner" title={item.title}>
                             {
                                 item.title=='About' ?  <InfoIcon /> : 
                                 item.title=='Tech' ?  <TechIcon /> : 

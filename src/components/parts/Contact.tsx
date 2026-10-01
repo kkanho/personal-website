@@ -52,7 +52,7 @@ const ContactMe = () => {
 
     return (
         <div id="ContactMe">
-            <div className='text-3xl'>Contact</div>
+            <div className='text-3xl text-primary'>Contact</div>
             <div className="flex flex-col gap-4 max-w-screen-md py-3 m-auto">
                 <div className="flex flex-col gap-4 sm:flex-row">
                     <Input 

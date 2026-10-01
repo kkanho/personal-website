@@ -94,13 +94,13 @@ function Repos() {
     return (
         <div id="allrepo">
             <div className="flex justify-between">
-                <div className='text-3xl'>Repos</div>
+                <div className='text-3xl text-primary'>Repos</div>
                 <div className="relative">
-                    <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
+                    <Search className="absolute left-3 top-3 h-4 w-4 text-primary_muted" />
                     <Input
                         type="search"
                         placeholder="Search here..."
-                        className="w-full rounded-lg bg-background pl-8 md:w-[200px] lg:w-[336px]"
+                        className="w-full rounded-lg pl-8 md:w-[200px] lg:w-[336px] text-primary_muted bg-background"
                         onChange={handleChange}
                     />
                 </div>
@@ -108,7 +108,7 @@ function Repos() {
             <div className="container hidden py-3 md:flex gap-4 flex-wrap">
                 {
                     topicList.map((topic,  i) => (
-                        <Badge key={i} className={`capitalize text-nowrap ${(value == topic)? "opacity-65" : "opacity-100"}`} onClick={handleClick}>{topic}</Badge>
+                        <Badge key={i} className={`capitalize text-nowrap text-primary hover:cursor-pointer ${(value == topic)? "opacity-65" : "opacity-100"}`} onClick={handleClick} title={topic}>{topic}</Badge>
                     ))
                 }
             </div>
